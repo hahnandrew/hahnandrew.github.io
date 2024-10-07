@@ -4,13 +4,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Website</title>
 <script src="./json.js"></script>
-<script>console.log(json)</script>
+<script>
+
+
+
+
+console.log(json);
+navigator.getBattery().then((battery) => {console.log(battery.charging);
+const text = document.querySelector('p');
+console.log(text.textContent);
+const body = document.querySelector('body');
+console.log(body);
+text.remove();
+
+
+
+const tmp = document.createElement("p")
+if (battery.charging){
+tmp.textContent = "testing navigator.getBattery api // computer is charging";
+} else {
+tmp.textContent = "testing navigator.getBattery api // computer is not charging";
+}
+body.appendChild(tmp);
+
+
+localStorage.setItem("myCat", "Tom");
+const cat = localStorage.getItem("myCat");
+console.log(cat)
+
+
+
+})
+</script>
 </head>
 
 <body>
 Hello World
+<p>filler text</p>
   <div>
     <a href="https://www.linkedin.com/in/andrew-h-986a3a157/">Linkedin Profile</a>
   </div>
